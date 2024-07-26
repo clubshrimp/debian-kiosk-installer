@@ -93,7 +93,7 @@ do
     --disable-save-password-bubble \
     --disable-session-crashed-bubble \
     --incognito \
-    --kiosk "https://neave.tv/"
+    --kiosk "http://192.168.50.10:8080/"
   sleep 5
 done &
 EOF
