@@ -57,6 +57,10 @@ Section "ServerLayout"
 EndSection
 
 Section "ServerFlags"
+    Option "BlankTime" "0"
+    Option "StandbyTime" "0"
+    Option "SuspendTime" "0"
+    Option "OffTime" "0"
     Option "DontVTSwitch" "true"
 EndSection
 EOF
@@ -77,6 +81,11 @@ if [ -e "/home/kiosk/.config/openbox/autostart" ]; then
 fi
 cat > /home/kiosk/.config/openbox/autostart << EOF
 #!/bin/bash
+
+# Disable screensaver and DPMS
+xset s off
+xset s noblank
+xset -dpms
 
 unclutter -idle 0.1 -grab -root &
 
