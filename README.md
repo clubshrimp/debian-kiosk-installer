@@ -7,7 +7,7 @@ Small installer script to setup a minimal kiosk with Chromium for Debian based L
 * Download this installer, make it executable and run it
 
   ```shell
-  wget https://github.com/clubshrimp/debian-kiosk-installer/blob/master/kiosk-installer.sh; chmod +x kiosk-installer.sh; ./kiosk-installer.sh
+  wget https://raw.githubusercontent.com/clubshrimp/debian-kiosk-installer/master/kiosk-installer.sh; chmod +x kiosk-installer.sh; ./kiosk-installer.sh
   ```
 
 ## What will it do?
