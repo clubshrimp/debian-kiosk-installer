@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # be new
-apt-get update
+apt update
 
 # get software
-apt-get install \
+apt install \
 	unclutter \
     xorg \
     chromium \
