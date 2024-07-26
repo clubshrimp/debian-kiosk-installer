@@ -30,6 +30,32 @@ if [ -e "/etc/X11/xorg.conf" ]; then
   mv /etc/X11/xorg.conf /etc/X11/xorg.conf.backup
 fi
 cat > /etc/X11/xorg.conf << EOF
+Section "Device"
+    Identifier  "Rockchip Graphics"
+    Driver      "modesetting"
+EndSection
+
+Section "Monitor"
+    Identifier "Monitor0"
+    Option     "DPMS" "false"
+EndSection
+
+Section "Screen"
+    Identifier "Screen0"
+    Device     "Rockchip Graphics"
+    Monitor    "Monitor0"
+    DefaultDepth 24
+    SubSection "Display"
+        Depth     24
+        Modes     "1920x1080"
+    EndSubSection
+EndSection
+
+Section "ServerLayout"
+    Identifier "Layout0"
+    Screen 0 "Screen0"
+EndSection
+
 Section "ServerFlags"
     Option "DontVTSwitch" "true"
 EndSection
